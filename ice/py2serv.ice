@@ -1,4 +1,4 @@
-module Serv2client {
+module py2serv {
 	struct Message {
 		string date;
 		int mission;

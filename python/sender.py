@@ -1,4 +1,5 @@
 import os
+import Ice
 while 1:
 	n=int(input("Number of messages: "))
 	for i in range(0, n):
