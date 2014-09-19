@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Test librairie three.js 3</title>
+		<link rel="stylesheet" href="ressources/mainpage.css"/>
+		<script src="ressources/three.js"></script>
+		<script src="ressources/TrackballControls.js"></script>
+		<script src="ressources/functions.js"></script>
+		<script src="ressources/utility.js"></script>
+	</head>
+	<body>
+		<h1>Test3</h1>
+		<script type="text/javascript">
+			function updateTime() {
+				var currentTime = new Date();
+				var hours = currentTime.getHours();
+				var minutes = currentTime.getMinutes();
+				var seconds = currentTime.getSeconds();
+				if (minutes < 10){
+					minutes = "0" + minutes;
+				}
+				if (seconds < 10){
+					seconds = "0" + seconds;
+				}
+				var v = hours + ":" + minutes + ":" + seconds + " ";
+				if(hours > 11){
+					v+="PM";
+				} else {
+					v+="AM"
+				}
+				setTimeout("updateTime()",1000);
+				document.getElementById('time').innerHTML=v;
+			}
+			updateTime();
+		</script>
+		<h4><span id="time" /></h4>
+		<div class='options'>
+			<input type="checkbox" id="lvl1_grey" value="checkbox">
+			<label>Transparent level 1</label>
+			<input type="checkbox" id="lvl2_grey" value="checkbox">
+			<label>Transparent level 2</label>
+		</div>
+		</br>
+		<script class="bordered" src="ressources/main.js"></script>
+		</br>
+	</body>
+</html>
