@@ -1,0 +1,18 @@
+create database test1 character set 'utf8';
+
+use test1
+
+create table messages(
+	date datetime not null,
+	mission int not null,
+	action char(3) not null,
+	id_objet int not null,
+	primary key (date)
+)
+engine=innodb;
+
+show tables;
+
+describe messages;
+
+insert into messages value('2014-09-17 14:28:00',99,'ADD',1);

@@ -1,19 +1,16 @@
-// A very basic web server in node.js
-// Stolen from: Node.js for Front-End Developers by Garann Means (p. 9-10)
- 
 var port = 5555;
 var serverUrl = "127.0.0.1";
  
 var http = require("http");
 var path = require("path");
 var fs = require("fs");
+var mysql = require('mysql');
 
 var page = "test.html";
  
 console.log("Starting web server at " + serverUrl + ":" + port);
 
 
-var mysql      = require('mysql');
 var connectionDB = mysql.createConnection({
   host     : "localhost",
   user     : "root",
