@@ -6,7 +6,4 @@ module py2serv {
 		int idObjet;
 	};
 	sequence<Message> MessageList;
-	interface Sender{
-		void Send(Message msg);
-	};
 };
