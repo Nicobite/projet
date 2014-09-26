@@ -5,11 +5,11 @@ module pyserv {
 			int mission;
 			string action;
 			int idObjet;
-		};
-	sequence<Message> MessageList;
+	};
 	
 	interface Sender{
-		void send();
+		void send(int round);
+		void shutdown();
 	};
 			
 };
